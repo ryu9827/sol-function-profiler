@@ -10,7 +10,7 @@ $ npm install
 $ node index.js ~/contracts/mytoken.sol
 ```
 
-.---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
+
 |                                                                  D:\Blockchain-Solidity\rootcore-Audit\contracts\SmartToken.sol
                                          |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -23,4 +23,4 @@ $ node index.js ~/contracts/mytoken.sol
 | SmartToken | destroy(address,uint256)              | public     | false    |         |                                | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
 | SmartToken | transfer(address,uint256)             | public     | false    | success | transfersAllowed               | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
 | SmartToken | transferFrom(address,address,uint256) | public     | false    | success | transfersAllowed               | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
-'---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+
