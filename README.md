@@ -8,15 +8,17 @@ Usage Example:
 $ npm install
 ...
 $ node index.js ~/contracts/mytoken.sol
-.--------------------------------------------------------------------------------------------------------.
-|                                        ~/contracts/mytoken.sol                                         |
-|--------------------------------------------------------------------------------------------------------|
-|   Contract    |           Function            | Visibility | Constant |  Returns  |     Modifiers      |
-|---------------|-------------------------------|------------|----------|-----------|--------------------|
-| MyToken       | ()                            | public     | false    |           | payable            |
-| MyToken       | initTokenHolder(address,uint) | public     | false    |           | onlyOwner          |
-| MyToken       | balance(address)              | public     | true     | uint      |                    |
-| MyToken       | transferAll(address,address)  | external   | false    |           | onlyTokenHolder    |
-| MyToken       | kill()                        | internal   | false    |           |                    |
-'--------------------------------------------------------------------------------------------------------'
-```
+.---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
+|                                                                  D:\Blockchain-Solidity\rootcore-Audit\contracts\SmartToken.sol
+                                         |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  Contract  |               Function                | Visibility | Constant | Returns |           Modifiers            |                Static Ana
+         |      Coverage      | Func Ana |
+|------------|---------------------------------------|------------|----------|---------|--------------------------------|-------------------------------------------|--------------------|----------|
+| SmartToken | SmartToken(string,string,uint8)       | public     | false    |         | ERC20Token                     | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | disableTransfers(bool)                | public     | false    |         | ownerOnly                      | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | issue(address,uint256)                | public     | false    |         | ownerOnly,validAddress,notThis | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | destroy(address,uint256)              | public     | false    |         |                                | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | transfer(address,uint256)             | public     | false    | success | transfersAllowed               | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | transferFrom(address,address,uint256) | public     | false    | success | transfersAllowed               | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+'---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'

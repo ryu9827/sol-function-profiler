@@ -13,14 +13,14 @@ generateReport(target, contract);
 
 function generateReport(target, contract) {
   var table = new asciiTable(target);
-  table.setHeading('Contract', 'Function', 'Visibility', 'Constant', 'Returns', 'Modifiers');
+  table.setHeading('Contract', 'Function', 'Visibility', 'Constant', 'Returns', 'Modifiers', 'Static Ana', 'Coverage', 'Func Ana');
 
   contract.body.forEach(function(contract) {
     if(contract.type == 'ContractStatement') {
       contract.body.forEach(function(part) {
         if(part.type == "FunctionDeclaration" && part.is_abstract == false) {
           var func = parseFunctionPart(contract, part);
-          table.addRow(func.contract, func.function, func.visibility, func.constant, func.returns, func.modifiers);
+          table.addRow(func.contract, func.function, func.visibility, func.constant, func.returns, func.modifiers, func.s_Analysis, func.coverage, func.f_Analysis);
         }
       })
     }
@@ -76,12 +76,19 @@ function parseFunctionPart(contract, part) {
     });
   }
 
+  // var s_Analysis = '[x]' ;
+  // var coverage = '[x]' ;
+  // var f_Analysis = '[x]'  ;
+
   return {
     contract:   contractName,
     function:   funcName,
     visibility: visibility,
     constant:   isConstant,
     returns:    returns,
-    modifiers:  custom
+    modifiers:  custom,
+    s_Analysis: ':white_check_mark::ballot_box_with_check:',
+    coverage: ':white_check_mark:',
+    f_Analysis: ''   
   }
 }
