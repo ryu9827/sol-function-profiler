@@ -8,6 +8,8 @@ Usage Example:
 $ npm install
 ...
 $ node index.js ~/contracts/mytoken.sol
+```
+
 .---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
 |                                                                  D:\Blockchain-Solidity\rootcore-Audit\contracts\SmartToken.sol
                                          |
