@@ -10,6 +10,8 @@ $ npm install
 $ node index.js ~/contracts/mytoken.sol
 ```
 
+
+
 |  Contract  |               Function                | Visibility | Constant | Returns |           Modifiers            |                Static Ana
          |      Coverage      | Func Ana |
 |------------|---------------------------------------|------------|----------|---------|--------------------------------|-------------------------------------------|--------------------|----------|
