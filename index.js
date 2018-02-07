@@ -13,7 +13,7 @@ generateReport(target, contract);
 
 function generateReport(target, contract) {
   var table = new asciiTable(target);
-  table.setHeading('Contract', 'Function', 'Visibility', 'Constant', 'Returns', 'Modifiers', 'Static Ana', 'Coverage', 'Func Ana');
+  table.setHeading('Contract', 'Function', 'Visibility', 'Constant', 'Returns', 'Modifiers', 'Static Analysis', 'Test Coverage', 'Functional Analysis');
 
   contract.body.forEach(function(contract) {
     if(contract.type == 'ContractStatement') {
@@ -89,6 +89,6 @@ function parseFunctionPart(contract, part) {
     modifiers:  custom,
     s_Analysis: ':white_check_mark::ballot_box_with_check:',
     coverage: ':white_check_mark:',
-    f_Analysis: ''   
+    f_Analysis: ':white_check_mark:'   
   }
 }
