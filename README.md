@@ -18,5 +18,17 @@ $ node index.js ~/contracts/mytoken.sol
 | Managed  | acceptManagement()          | public     | false    |         |             | :white_check_mark: :ballot_box_with_check:            | :white_check_mark:           | :white_check_mark:                 |
 
 
+
+|  Contract  |               Function                | Visibility | Constant | Returns |           Modifiers            |                Static Ana
+         |      Coverage      | Func Ana |
+|------------|---------------------------------------|------------|----------|---------|--------------------------------|-------------------------------------------|--------------------|----------|
+| SmartToken | SmartToken(string,string,uint8)       | public     | false    |         | ERC20Token                     | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | disableTransfers(bool)                | public     | false    |         | ownerOnly                      | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | issue(address,uint256)                | public     | false    |         | ownerOnly,validAddress,notThis | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | destroy(address,uint256)              | public     | false    |         |                                | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | transfer(address,uint256)             | public     | false    | success | transfersAllowed               | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+| SmartToken | transferFrom(address,address,uint256) | public     | false    | success | transfersAllowed               | :white_check_mark::ballot_box_with_check: | :white_check_mark: |          |
+
+
 Note that you may have to delete some lines and the title to make it looks like the table above.
 I need more time to improve the code.
